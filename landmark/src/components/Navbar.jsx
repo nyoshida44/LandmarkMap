@@ -1,21 +1,25 @@
 import React from 'react';
-import {AppBar, Box, Button, Toolbar, Typography} from "@mui/material";
+import {AppBar, Button, IconButton, Toolbar, Typography} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const Navbar = (props) => {
-
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography component="div" variant="h6" sx={{ flexGrow: 0.1 }}>
+        <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+          <MenuIcon />
+        </IconButton>
+        <Typography component="div" variant="h6" sx={{ flexGrow: 1 }}>
           Landmark Maker
         </Typography>
-        <Box sx={{ flexGrow: 1 }}>
-          <Typography component="div" variant="h7"> 
-            Add a Landmark
-          </Typography>
-        </Box>
         <Button color="inherit">
-          Logout
+          Login
         </Button>
       </Toolbar>
     </AppBar>
