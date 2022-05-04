@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Typography } from '@mui/material';
+import { Button, Paper, Typography } from '@mui/material';
 import Image from '../img/world.jpg'; 
 
 export const Main = (props) => {
@@ -19,12 +19,15 @@ export const Main = (props) => {
         opacity: "0.8"
       }}
     > 
-      <Typography component="div" variant="h4" sx={{color: "darkblue"}}>
+      <Typography component="div" variant="h4" sx={{color: "darkblue", fontFamily: "Jura"}}>
         Landmark Maker
       </Typography>
-      <Typography component="div" variant="h5" color="black">
+      <Typography component="div" variant="h5" sx={{color: "black", fontFamily: "Jura"}}>
         A CRUD tool for your Points of Interests
       </Typography>
+      <Button variant="contained" sx={{margin: "1em"}}>
+        Register Now
+      </Button>
     </Paper>
   );
 }

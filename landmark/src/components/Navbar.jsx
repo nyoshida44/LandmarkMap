@@ -1,8 +1,11 @@
-import React from 'react';
-import {AppBar, Button, IconButton, Toolbar, Typography} from '@mui/material';
+import { React, useState } from 'react';
+import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export const Navbar = (props) => {
+
+  const [login, setLogin] = useState(false);
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -18,9 +21,11 @@ export const Navbar = (props) => {
         <Typography component="div" variant="h6" sx={{ flexGrow: 1 }}>
           Landmark Maker
         </Typography>
-        <Button color="inherit">
-          Login
-        </Button>
+        {login === false ? (
+          <Button color="inherit" onClick={(() => setLogin(true))}>Login</Button>
+        ) : (
+          <Button color="inherit" onClick={(() => setLogin(false))}>Logout</Button>
+        )}
       </Toolbar>
     </AppBar>
   );
